@@ -1,16 +1,12 @@
--- DROP DATABASE
 DROP DATABASE IF EXISTS ecommerce_db;
 
--- CREATE DATABASE
 CREATE DATABASE ecommerce_db;
 
--- Category model
 CREATE TABLE Category (
     id INT AUTO_INCREMENT PRIMARY KEY,
     category_name VARCHAR(255) NOT NULL
 );
 
--- Product model
 CREATE TABLE Product (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(255) NOT NULL,
@@ -20,13 +16,11 @@ CREATE TABLE Product (
     FOREIGN KEY (category_id) REFERENCES Category(id)
 );
 
--- Tag model
 CREATE TABLE Tag (
     id INT AUTO_INCREMENT PRIMARY KEY,
     tag_name VARCHAR(255) NOT NULL
 );
 
--- ProductTag model
 CREATE TABLE ProductTag (
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT,
