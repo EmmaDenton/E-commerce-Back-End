@@ -6,6 +6,10 @@ This project is a web application designed to power the backend operations of an
 
 The project uses Node.js, Express.js, Sequelize, and MySQL to provide essential CRUD (Create, Read, Update, Delete) functionalities for categories and products. Additionally, it allows the association of multiple tags with products through a flexible ProductTag model. 
 
+
+https://github.com/EmmaDenton/E-commerce-Back-End/assets/141465015/45591542-64b1-4274-8812-c8ff40646788
+
+
 ## User Story
 AS A manager at an internet retail company
 I WANT a back end for my e-commerce website that uses the latest technologies
