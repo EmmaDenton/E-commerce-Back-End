@@ -2,18 +2,9 @@ const seedCategories = require('./category-seeds');
 const seedProducts = require('./product-seeds');
 const seedTags = require('./tag-seeds');
 const seedProductTags = require('./product-tag-seeds');
-const mysql = require('mysql2');
 
 const sequelize = require('../config/connection');
 
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    user: 'root',
-    password: 'jecsHcEvKh32yQ2rEuMP',
-    database: 'employeeCMS_db'
-  }
-);
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });

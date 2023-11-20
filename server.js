@@ -2,10 +2,15 @@ const express = require('express');
 const routes = require('./routes');
 const { Sequelize } = require('sequelize');
 const mysql = require('mysql2');
+require('dotenv').config();
 
+const dbHost = process.env.DB_HOST;
+const dbUser = process.env.DB_USER;
+const dbPassword = process.env.DB_PASSWORD;
+const dbName = process.env.DB_DATABASE;
 
-const sequelize = new Sequelize('ecommerce_db', 'root', 'jecsHcEvKh32yQ2rEuMP', {
-  host: 'localhost',
+const sequelize = new Sequelize(dbName, dbUser, dbPassword, {
+  host: dbHost,
   dialect: 'mysql',
 });
 
@@ -29,5 +34,3 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
-
-// ...
